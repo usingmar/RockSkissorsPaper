@@ -6,7 +6,6 @@ class HelpTable{
 
     createTableData(variants){
         this.createHead(variants); 
-
         for(let i = 0; i < variants.length; i++){
             let buf = variants.map(item => RulesLogic.calculateResult(i, variants.indexOf(item)));
             buf.unshift(variants[i]);
