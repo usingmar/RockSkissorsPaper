@@ -43,7 +43,6 @@ class Game{
             console.log(`HMAC: ${HMACGenerator_.getHMAC()}`);
             this.showMooves();
             let userMoove = this.readUserMoove();
-            //тут наверно можно как-то разбить проверки, но хз
             if(userMoove === 0){
                 this.isEnd = true;
                 break;
@@ -59,7 +58,6 @@ class Game{
                 this.resume('Illegal moove, press enter to continue...');
                 continue;
             }
-            //
             console.log(`You moove - ` + this.mooves[userMoove-1]+ `\nComputer moove - ` + this.mooves[computerMoove]);
             RulesLogic.setMooves(this.mooves);
             console.log(`Result: ${RulesLogic.calculateResult(userMoove - 1, computerMoove)}!`);
